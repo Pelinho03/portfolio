@@ -15,7 +15,7 @@
     --cor-secundaria: #9333ea;
 
     /* Fundos */
-    --cor-fundo: #ffffff;
+    --cor-fundo: #f5f5f5;
     --cor-fundo-secundario: #f1f5f9;
 
     /* Texto */
@@ -59,29 +59,37 @@
 
     /* Transição */
     --transicao: all 0.3s ease-in-out;
+    --transicao-cores: all 0.3s linear;
 }
 
 [data-theme="dark"] {
+    /* Cores principais */
     --cor-primaria: #4f46e5;
     --cor-secundaria: #7c3aed;
 
+    /* Fundos */
     --cor-fundo: #0f172a;
     --cor-fundo-secundario: #0a0f1c;
 
+    /* Texto */
     --cor-texto: #e2e8f0;
     --cor-texto-projetos: rgba(226, 232, 240, 0.8);
 
+    /* Vidro e efeitos */
     --vidro-base: rgba(255, 255, 255, 0.1);
     --vidro-navegacao: rgba(15, 23, 42, 0.8);
     --vidro-foto-perfil: 0 0 20px rgba(79, 70, 229, 0.3);
     --vidro-formulario: rgba(255, 255, 255, 0.05);
     --vidro-sobre: rgba(255, 255, 255, 0.05);
 
+    /* Cartões de projetos */
     --projeto-card-bg: rgba(255, 255, 255, 0.05);
     --projeto-card-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
 
+    /* Campos formulário */
     --form-shadow: 0 0 10px rgba(79, 70, 229, 0.3);
 
+    /* Botão formulário */
     --botao-gradiente: linear-gradient(
         45deg,
         var(--cor-primaria),
@@ -89,6 +97,7 @@
     );
     --botao-hover-shadow: 0 5px 10px rgba(79, 70, 229, 0.4);
 
+    /* Fundo partículas */
     --fundo-particulas: radial-gradient(
             circle at 10% 20%,
             var(--cor-primaria) 0%,
@@ -101,7 +110,9 @@
         ),
         var(--cor-fundo-secundario);
 
+    /* Transição */
     --transicao: all 0.5s ease;
+    --transicao-cores: all 0.3s linear;
 }
 
 /**********************************/
@@ -110,11 +121,13 @@
 
 html {
     scroll-behavior: smooth;
+    transition: var(--transicao-cores);
 }
 
 body {
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
+    transition: var(--transicao-cores);
 }
 
 /**********************************/
@@ -128,6 +141,7 @@ body {
     width: 100%;
     z-index: 100;
     padding: 1.5rem;
+    transition: var(--transicao-cores);
 }
 
 .menu {
@@ -140,6 +154,7 @@ body {
 .menu-link {
     text-decoration: none;
     color: var(--cor-texto);
+    transition: var(--transicao-cores);
     font-weight: 500;
     position: relative;
     padding: 0.5rem;
@@ -173,7 +188,7 @@ body {
 
 .switch_track {
     background-color: var(--cor-texto);
-    transform: var(--transicao);
+    transition: var(--transicao-cores);
     display: block;
     height: 1rem;
     width: 2rem;
@@ -184,8 +199,8 @@ body {
 
 .switch_track::before {
     content: "";
-    background-color: var(--cor-secundaria);
-    transform: var(--transicao);
+    background-color: var(--cor-primaria);
+    transition: var(--transicao-cores);
     display: block;
     width: 1rem;
     height: 1rem;
@@ -201,7 +216,7 @@ body {
 .sol,
 .lua {
     color: var(--cor-texto);
-    transform: var(--transicao);
+    transition: var(--transicao-cores);
 }
 
 /**********************************/
@@ -220,6 +235,7 @@ body {
     width: 350px;
     height: 350px;
     box-shadow: var(--vidro-foto-perfil);
+    transition: var(--transicao-cores);
     border-radius: 50%;
     border: 4px solid var(--vidro-base);
     animation: flutuar 5s ease-in-out infinite;
@@ -229,6 +245,7 @@ h1 {
     text-align: center;
     font-size: 3.5rem;
     color: var(--cor-primaria);
+    transition: var(--transicao-cores);
     font-weight: bold;
     margin: 10px;
 }
@@ -236,6 +253,7 @@ h1 {
 .cabecalho-sub-titulo {
     font-size: 1.5rem;
     color: var(--cor-texto);
+    transition: var(--transicao-cores);
 }
 
 /**********************************/
@@ -249,18 +267,20 @@ h1 {
 .sobre-titulo {
     font-size: 3rem;
     color: var(--cor-texto);
+    transition: var(--transicao-cores);
     text-align: center;
     margin-bottom: 20px;
 }
 
 .sobre-caixa {
     padding: 1.5rem;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     border-radius: 16px;
     border: 1px solid var(--vidro-base);
     backdrop-filter: blur(10px);
     background: var(--vidro-sobre);
+    transition: var(--transicao-cores);
 }
 
 .sobre-paragrafo {
@@ -279,7 +299,7 @@ h1 {
 .projetos-titulo {
     text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .projetos-caixa {
@@ -290,8 +310,21 @@ h1 {
     margin: 0 auto;
 }
 
+.projetos-caixa-solo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.botao-projeto {
+    margin-top: 1rem;
+}
+
 .projetos-card {
     background: var(--projeto-card-bg);
+    transition: var(--transicao-cores);
     border-radius: 16px;
     backdrop-filter: blur(5px);
     border: 1px solid var(--vidro-base);
@@ -302,6 +335,7 @@ h1 {
 
 .projetos-card:hover {
     box-shadow: var(--projeto-card-shadow);
+    transition: var(--transicao-cores);
     transform: translateY(-10px) scale(1.03);
 }
 
@@ -321,6 +355,7 @@ h1 {
 
 .paragrafo-projetos {
     color: var(--cor-texto-projetos);
+    transition: var(--transicao-cores);
     line-height: 1.5rem;
 }
 
@@ -335,13 +370,14 @@ h1 {
 .contactos-titulo {
     text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .formulario-contacto {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     background: var(--vidro-formulario);
+    transition: var(--transicao-cores);
     backdrop-filter: blur(5px);
     border-radius: 16px;
     padding: 2rem;
@@ -351,6 +387,7 @@ h1 {
 .campo-form {
     width: 100%;
     background: var(--vidro-formulario);
+    transition: var(--transicao-cores);
     padding: 1rem;
     border-radius: 8px;
     color: var(--cor-texto);
@@ -360,6 +397,7 @@ h1 {
 
 .campo-form:focus {
     border-color: var(--cor-secundaria);
+    transition: var(--transicao-cores);
     box-shadow: var(--form-shadow);
 }
 
@@ -370,6 +408,7 @@ h1 {
 .botao-form {
     color: #e2e8f0;
     background: var(--botao-gradiente);
+    transition: var(--transicao-cores);
     padding: 1rem 2rem;
     border: none;
     border-radius: 8px;
@@ -382,6 +421,7 @@ h1 {
 .botao-form:hover {
     transform: translateY(-4px);
     box-shadow: var(--botao-hover-shadow);
+    transition: var(--transicao-cores);
 }
 
 /**********************************/
@@ -419,6 +459,6 @@ h1 {
 
 @media (max-width: 768px) {
     .menu {
-        gap: 1rem;
+        gap: 0.8rem;
     }
 }
