@@ -2,33 +2,129 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-        sans-serif;
+    font-family: "Ubuntu", sans-serif;
 }
+
+/**********************************/
+/* 0. Variáveis
+/**********************************/
+
+[data-theme="light"] {
+    /* Cores principais */
+    --cor-primaria: #4f46e5;
+    --cor-secundaria: #9333ea;
+
+    /* Fundos */
+    --cor-fundo: #ffffff;
+    --cor-fundo-secundario: #f1f5f9;
+
+    /* Texto */
+    --cor-texto: #1e293b;
+    --cor-texto-projetos: rgba(30, 41, 59, 0.8);
+
+    /* Vidro e efeitos */
+    --vidro-base: rgba(0, 0, 0, 0.1);
+    --vidro-navegacao: rgba(255, 255, 255, 0.85);
+    --vidro-foto-perfil: 0 0 20px rgba(79, 70, 229, 0.25);
+    --vidro-formulario: rgba(79, 70, 229, 0.08);
+    --vidro-sobre: rgba(79, 70, 229, 0.08);
+
+    /* Cartões de projetos */
+    --projeto-card-bg: rgba(79, 70, 229, 0.04);
+    --projeto-card-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
+
+    /* Campos formulário */
+    --form-shadow: 0 0 12px rgba(79, 70, 229, 0.25);
+
+    /* Botão formulário */
+    --botao-gradiente: linear-gradient(
+        45deg,
+        var(--cor-primaria),
+        var(--cor-secundaria)
+    );
+    --botao-hover-shadow: 0 5px 12px rgba(79, 70, 229, 0.35);
+
+    /* Fundo partículas */
+    --fundo-particulas: radial-gradient(
+            circle at 10% 20%,
+            var(--cor-primaria) 0%,
+            transparent 20%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            var(--cor-secundaria) 0%,
+            transparent 20%
+        ),
+        var(--cor-fundo-secundario);
+
+    /* Transição */
+    --transicao: all 0.3s ease-in-out;
+}
+
+[data-theme="dark"] {
+    --cor-primaria: #4f46e5;
+    --cor-secundaria: #7c3aed;
+
+    --cor-fundo: #0f172a;
+    --cor-fundo-secundario: #0a0f1c;
+
+    --cor-texto: #e2e8f0;
+    --cor-texto-projetos: rgba(226, 232, 240, 0.8);
+
+    --vidro-base: rgba(255, 255, 255, 0.1);
+    --vidro-navegacao: rgba(15, 23, 42, 0.8);
+    --vidro-foto-perfil: 0 0 20px rgba(79, 70, 229, 0.3);
+    --vidro-formulario: rgba(255, 255, 255, 0.05);
+    --vidro-sobre: rgba(255, 255, 255, 0.05);
+
+    --projeto-card-bg: rgba(255, 255, 255, 0.05);
+    --projeto-card-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
+
+    --form-shadow: 0 0 10px rgba(79, 70, 229, 0.3);
+
+    --botao-gradiente: linear-gradient(
+        45deg,
+        var(--cor-primaria),
+        var(--cor-secundaria)
+    );
+    --botao-hover-shadow: 0 5px 10px rgba(79, 70, 229, 0.4);
+
+    --fundo-particulas: radial-gradient(
+            circle at 10% 20%,
+            var(--cor-primaria) 0%,
+            transparent 20%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            var(--cor-secundaria) 0%,
+            transparent 20%
+        ),
+        var(--cor-fundo-secundario);
+
+    --transicao: all 0.5s ease;
+}
+
+/**********************************/
+/* 1. Estilos gerais
+/**********************************/
 
 html {
     scroll-behavior: smooth;
 }
 
-:root {
-    --primaria: #4f46e5;
-    --secundaria: #7c3aed;
-    --escuro: #0f172a;
-    --maisEscuro: #0a0f1c;
-    --claro: #e2e8f0;
-    --vidro: rgba(255, 255, 255, 0.1);
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
 }
 
-body {
-    background-color: var(--escuro);
-    color: var(--claro);
-}
+/**********************************/
+/* 2. Navegação | menu
+/**********************************/
 
 .navegacao {
     position: fixed;
     top: 0;
-    background: rgba(15, 23, 42, 0.8);
+    background: var(--vidro-navegacao);
     width: 100%;
     z-index: 100;
     padding: 1.5rem;
@@ -43,7 +139,7 @@ body {
 
 .menu-link {
     text-decoration: none;
-    color: var(--claro);
+    color: var(--cor-texto);
     font-weight: 500;
     position: relative;
     padding: 0.5rem;
@@ -57,13 +153,60 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    background: linear-gradient(90deg, var(--primaria), var(--secundaria));
-    transition: width 0.5s ease;
+    background: linear-gradient(
+        90deg,
+        var(--cor-primaria),
+        var(--cor-secundaria)
+    );
+    transition: var(--transicao);
 }
 
 .menu-link:hover::after {
     width: 100%;
 }
+
+.switch {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.switch_track {
+    background-color: var(--cor-texto);
+    transform: var(--transicao);
+    display: block;
+    height: 1rem;
+    width: 2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    margin: 0 0.2rem;
+}
+
+.switch_track::before {
+    content: "";
+    background-color: var(--cor-secundaria);
+    transform: var(--transicao);
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 1rem;
+    position: relative;
+    left: 0;
+}
+
+.switch_track--light::before {
+    left: 1rem;
+}
+
+.sol,
+.lua {
+    color: var(--cor-texto);
+    transform: var(--transicao);
+}
+
+/**********************************/
+/* 3. Foto de Perfil
+/**********************************/
 
 .cabecalho {
     min-height: 100vh;
@@ -76,47 +219,58 @@ body {
 .foto-perfil {
     width: 350px;
     height: 350px;
-    box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
+    box-shadow: var(--vidro-foto-perfil);
     border-radius: 50%;
-    border: 4px solid var(--vidro);
+    border: 4px solid var(--vidro-base);
     animation: flutuar 5s ease-in-out infinite;
 }
 
 h1 {
     text-align: center;
     font-size: 3.5rem;
-    color: var(--primaria);
+    color: var(--cor-primaria);
     font-weight: bold;
     margin: 10px;
 }
 
 .cabecalho-sub-titulo {
     font-size: 1.5rem;
-    color: var(--claro);
+    color: var(--cor-texto);
 }
+
+/**********************************/
+/* 4. Sobre Mim
+/**********************************/
 
 .sobre {
     padding: 6rem 2rem;
 }
+
 .sobre-titulo {
     font-size: 3rem;
-    color: var(--claro);
+    color: var(--cor-texto);
     text-align: center;
     margin-bottom: 20px;
 }
+
 .sobre-caixa {
     padding: 1.5rem;
     max-width: 800px;
     margin: 0 auto;
     border-radius: 16px;
-    border: 1px solid var(--vidro);
+    border: 1px solid var(--vidro-base);
     backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--vidro-sobre);
 }
+
 .sobre-paragrafo {
     text-align: center;
     font-size: 1.2rem;
 }
+
+/**********************************/
+/* 5. Projetos
+/**********************************/
 
 .projetos {
     padding: 6rem 2rem;
@@ -137,17 +291,17 @@ h1 {
 }
 
 .projetos-card {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--projeto-card-bg);
     border-radius: 16px;
     backdrop-filter: blur(5px);
-    border: 1px solid var(--vidro);
+    border: 1px solid var(--vidro-base);
     overflow: hidden;
-    transition: all 0.5s ease;
+    transition: var(--transicao);
     cursor: pointer;
 }
 
 .projetos-card:hover {
-    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
+    box-shadow: var(--projeto-card-shadow);
     transform: translateY(-10px) scale(1.03);
 }
 
@@ -156,6 +310,7 @@ h1 {
     width: 100%;
     object-fit: cover;
 }
+
 .caixa-textos-projeto {
     padding: 1.5rem;
 }
@@ -165,40 +320,47 @@ h1 {
 }
 
 .paragrafo-projetos {
-    color: rgba(226, 232, 240, 0.8);
+    color: var(--cor-texto-projetos);
     line-height: 1.5rem;
 }
+
+/**********************************/
+/* 6. Contactos
+/**********************************/
 
 .contactos {
     padding: 6rem 2rem;
 }
+
 .contactos-titulo {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 50px;
 }
+
 .formulario-contacto {
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--vidro-formulario);
     backdrop-filter: blur(5px);
     border-radius: 16px;
     padding: 2rem;
-    border: 1px solid var(--vidro);
+    border: 1px solid var(--vidro-base);
 }
+
 .campo-form {
     width: 100%;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--vidro-formulario);
     padding: 1rem;
     border-radius: 8px;
-    color: var(--claro);
-    border: 1px solid var(--vidro);
+    color: var(--cor-texto);
+    border: 1px solid var(--vidro-base);
     outline: none;
 }
 
 .campo-form:focus {
-    border-color: var(--secundaria);
-    box-shadow: 0 0 10px rgba(79, 70, 229, 0.3);
+    border-color: var(--cor-secundaria);
+    box-shadow: var(--form-shadow);
 }
 
 .grupo-form {
@@ -206,21 +368,25 @@ h1 {
 }
 
 .botao-form {
-    color: var(--claro);
-    background: linear-gradient(45deg, var(--primaria), var(--secundaria));
+    color: #e2e8f0;
+    background: var(--botao-gradiente);
     padding: 1rem 2rem;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     font-weight: bold;
     width: 100%;
-    transition: all 0.5s ease;
+    transition: var(--transicao);
 }
 
 .botao-form:hover {
     transform: translateY(-4px);
-    box-shadow: 0 5px 10px rgba(79, 70, 229, 0.4);
+    box-shadow: var(--botao-hover-shadow);
 }
+
+/**********************************/
+/* 7. Partículas
+/**********************************/
 
 .particulas {
     position: fixed;
@@ -230,29 +396,26 @@ h1 {
     height: 100%;
     z-index: -1;
     opacity: 0.5;
-    background: radial-gradient(
-            circle at 10% 20%,
-            var(--primaria) 0%,
-            transparent 20%
-        ),
-        radial-gradient(
-            circle at 90% 80%,
-            var(--secundaria) 0%,
-            transparent 20%
-        ),
-        var(--maisEscuro);
+    background: var(--fundo-particulas);
 }
+
+/**********************************/
+/* 8. Animações
+/**********************************/
 
 @keyframes flutuar {
     0%,
     100% {
         transform: translateY(0);
     }
-
     50% {
         transform: translateY(-20px);
     }
 }
+
+/**********************************/
+/* 9. Media Queries
+/**********************************/
 
 @media (max-width: 768px) {
     .menu {

@@ -12,3 +12,14 @@ function enviarMensagem(event) {
 
     window.open(url, "_blank");
 }
+
+const _elements = {
+    loading: document.querySelector(".loading"),
+    switch: document.querySelector(".switch_track"),
+};
+
+_elements.switch.addEventListener("click", () => {
+    const isLight = _elements.switch.classList.toggle("switch_track--light");
+    if (isLight) document.documentElement.setAttribute("data-theme", "light");
+    else document.documentElement.setAttribute("data-theme", "dark");
+});
