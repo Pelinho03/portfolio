@@ -23,3 +23,10 @@ _elements.switch.addEventListener("click", () => {
     if (isLight) document.documentElement.setAttribute("data-theme", "light");
     else document.documentElement.setAttribute("data-theme", "dark");
 });
+
+// Atualiza o ano atual no elemento com a classe "date"
+const currentYear = new Date().getFullYear();
+const dateElement = document.querySelector(".date");
+if (dateElement) {
+    dateElement.textContent = currentYear + ". ";
+}
