@@ -296,6 +296,12 @@ h1 {
     padding: 6rem 2rem;
 }
 
+.projetos-link {
+    text-decoration: none;
+    color: var(--cor-texto);
+    transition: var(--transicao-cores);
+}
+
 .projetos-titulo {
     text-align: center;
     font-size: 2.5rem;
