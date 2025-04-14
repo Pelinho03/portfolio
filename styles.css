@@ -488,8 +488,20 @@ h1 {
     cursor: pointer;
 }
 
-.footer-icons-icon:hover {
+.footer-icons-icon {
     color: var(--cor-texto);
+    transition: var(--transicao-cores);
+    text-decoration: none;
+}
+
+.footer-icons-icon:hover {
+    color: var(--cor-primaria);
+    transform: scale(1.2);
+    transition: var(--transicao-cores);
+}
+
+.footer-icons-icon i {
+    pointer-events: none;
 }
 
 .date::after {
