@@ -7,6 +7,20 @@
 
 /**********************************/
 /* 0. Variáveis
+/* 1. Estilos Gerais
+/* 2. Navegação | menu
+/* 3. Foto de Perfil
+/* 4. Sobre Mim
+/* 5. Projetos
+/* 6. Contactos
+/* 7. Footer
+/* 8. Partículas
+/* 9. Animações
+/* 10. Media Queries
+/**********************************/
+
+/**********************************/
+/* 0. Variáveis
 /**********************************/
 
 [data-theme="light"] {
@@ -431,49 +445,7 @@ h1 {
 }
 
 /**********************************/
-/* 7. Partículas
-/**********************************/
-
-.particulas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0.5;
-    background: var(--fundo-particulas);
-}
-
-/**********************************/
-/* 8. Animações
-/**********************************/
-
-@keyframes flutuar {
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-}
-
-/**********************************/
-/* 9. Media Queries
-/**********************************/
-
-@media (max-width: 768px) {
-    .menu {
-        gap: 0.5rem;
-    }
-    .cabecalho-sub-titulo {
-        font-size: 1.2rem;
-    }
-}
-
-/**********************************/
-/* 9. Footer
+/* 7. Footer
 /**********************************/
 .footer {
     position: relative;
@@ -521,4 +493,46 @@ h1 {
     text-align: center;
     padding: 1.5rem;
     line-height: 1.5rem;
+}
+
+/**********************************/
+/* 8. Partículas
+/**********************************/
+
+.particulas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    background: var(--fundo-particulas);
+}
+
+/**********************************/
+/* 9. Animações
+/**********************************/
+
+@keyframes flutuar {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/**********************************/
+/* 10. Media Queries
+/**********************************/
+
+@media (max-width: 768px) {
+    .menu {
+        gap: 0.5rem;
+    }
+    .cabecalho-sub-titulo {
+        font-size: 1.2rem;
+    }
 }
