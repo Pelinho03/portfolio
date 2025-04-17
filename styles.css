@@ -25,30 +25,30 @@
 
 [data-theme="light"] {
     /* Cores principais */
-    --cor-primaria: #4f46e5;
-    --cor-secundaria: #9333ea;
+    --cor-primaria: #3b3abf; /* Azul mais escuro */
+    --cor-secundaria: #6b21a8; /* Roxo mais escuro */
 
     /* Fundos */
-    --cor-fundo: #f5f5f5;
-    --cor-fundo-secundario: #f1f5f9;
+    --cor-fundo: #e4e4e7; /* Cinza claro */
+    --cor-fundo-secundario: #d4d4d8; /* Cinza médio */
 
     /* Texto */
-    --cor-texto: #1e293b;
-    --cor-texto-projetos: rgba(30, 41, 59, 0.8);
+    --cor-texto: #111827; /* Preto suave */
+    --cor-texto-projetos: rgba(17, 24, 39, 0.8); /* Preto suave com opacidade */
 
     /* Vidro e efeitos */
-    --vidro-base: rgba(0, 0, 0, 0.1);
-    --vidro-navegacao: rgba(255, 255, 255, 0.85);
-    --vidro-foto-perfil: 0 0 20px rgba(79, 70, 229, 0.25);
-    --vidro-formulario: rgba(79, 70, 229, 0.08);
-    --vidro-sobre: rgba(79, 70, 229, 0.08);
+    --vidro-base: rgba(0, 0, 0, 0.15); /* Transparência mais escura */
+    --vidro-navegacao: rgba(255, 255, 255, 0.9); /* Fundo mais opaco */
+    --vidro-foto-perfil: 0 0 20px rgba(59, 58, 191, 0.3); /* Sombra azul mais escura */
+    --vidro-formulario: rgba(59, 58, 191, 0.1); /* Fundo mais escuro */
+    --vidro-sobre: rgba(59, 58, 191, 0.1); /* Fundo mais escuro */
 
     /* Cartões de projetos */
-    --projeto-card-bg: rgba(79, 70, 229, 0.04);
-    --projeto-card-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
+    --projeto-card-bg: rgba(59, 58, 191, 0.06); /* Fundo mais escuro */
+    --projeto-card-shadow: 0 10px 20px rgba(59, 58, 191, 0.25); /* Sombra mais escura */
 
     /* Campos formulário */
-    --form-shadow: 0 0 12px rgba(79, 70, 229, 0.25);
+    --form-shadow: 0 0 12px rgba(59, 58, 191, 0.3); /* Sombra mais escura */
 
     /* Botão formulário */
     --botao-gradiente: linear-gradient(
@@ -56,7 +56,7 @@
         var(--cor-primaria),
         var(--cor-secundaria)
     );
-    --botao-hover-shadow: 0 5px 12px rgba(79, 70, 229, 0.35);
+    --botao-hover-shadow: 0 5px 12px rgba(59, 58, 191, 0.4); /* Sombra mais escura */
 
     /* Fundo partículas */
     --fundo-particulas: radial-gradient(
