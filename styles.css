@@ -361,6 +361,27 @@ h1 {
     transform: translateY(-10px) scale(1.03);
 }
 
+.hidden {
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateX(-100%);
+    transition: all 1s;
+    pointer-events: none;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: all 1s;
+    pointer-events: auto;
+}
+
+.projetos-caixa :nth-child(2),
+.projetos-caixa :nth-child(3) {
+    transition-delay: 50ms;
+}
+
 .projetos_imagem {
     height: 200px;
     width: 100%;
