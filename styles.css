@@ -25,30 +25,31 @@
 
 [data-theme="light"] {
     /* Cores principais */
-    --cor-primaria: #3b3abf; /* Azul mais escuro */
-    --cor-secundaria: #6b21a8; /* Roxo mais escuro */
+    --cor-primaria: #3b3abf;
+    --cor-secundaria: #6b21a8;
 
     /* Fundos */
-    --cor-fundo: #e4e4e7; /* Cinza claro */
-    --cor-fundo-secundario: #d4d4d8; /* Cinza médio */
+    --cor-fundo: #e4e4e7;
+    --cor-fundo-secundario: #d4d4d8;
 
     /* Texto */
-    --cor-texto: #111827; /* Preto suave */
-    --cor-texto-projetos: rgba(17, 24, 39, 0.8); /* Preto suave com opacidade */
+    --cor-texto: #271111;
+    --cor-texto-projetos: rgba(17, 24, 39, 0.8);
+    --cor-placeholder: rgba(17, 24, 39, 0.7);
 
     /* Vidro e efeitos */
-    --vidro-base: rgba(0, 0, 0, 0.15); /* Transparência mais escura */
-    --vidro-navegacao: rgba(255, 255, 255, 0.9); /* Fundo mais opaco */
-    --vidro-foto-perfil: 0 0 20px rgba(59, 58, 191, 0.3); /* Sombra azul mais escura */
-    --vidro-formulario: rgba(59, 58, 191, 0.1); /* Fundo mais escuro */
-    --vidro-sobre: rgba(59, 58, 191, 0.1); /* Fundo mais escuro */
+    --vidro-base: rgba(0, 0, 0, 0.15);
+    --vidro-navegacao: rgba(255, 255, 255, 0.9);
+    --vidro-foto-perfil: 0 0 20px rgba(59, 58, 191, 0.3);
+    --vidro-formulario: rgba(59, 58, 191, 0.1);
+    --vidro-sobre: rgba(59, 58, 191, 0.1);
 
     /* Cartões de projetos */
-    --projeto-card-bg: rgba(59, 58, 191, 0.06); /* Fundo mais escuro */
-    --projeto-card-shadow: 0 10px 20px rgba(59, 58, 191, 0.25); /* Sombra mais escura */
+    --projeto-card-bg: rgba(59, 58, 191, 0.06);
+    --projeto-card-shadow: 0 10px 20px rgba(59, 58, 191, 0.25);
 
     /* Campos formulário */
-    --form-shadow: 0 0 12px rgba(59, 58, 191, 0.3); /* Sombra mais escura */
+    --form-shadow: 0 0 12px rgba(59, 58, 191, 0.3);
 
     /* Botão formulário */
     --botao-gradiente: linear-gradient(
@@ -56,7 +57,7 @@
         var(--cor-primaria),
         var(--cor-secundaria)
     );
-    --botao-hover-shadow: 0 5px 12px rgba(59, 58, 191, 0.4); /* Sombra mais escura */
+    --botao-hover-shadow: 0 5px 12px rgba(59, 58, 191, 0.4);
 
     /* Fundo partículas */
     --fundo-particulas: radial-gradient(
@@ -88,6 +89,7 @@
     /* Texto */
     --cor-texto: #e2e8f0;
     --cor-texto-projetos: rgba(226, 232, 240, 0.8);
+    --cor-placeholder: rgba(226, 232, 240, 0.5);
 
     /* Vidro e efeitos */
     --vidro-base: rgba(255, 255, 255, 0.1);
@@ -410,7 +412,6 @@ h1 {
     transition: var(--transicao-cores);
     padding: 1rem;
     border-radius: 8px;
-    color: var(--cor-texto);
     border: 1px solid var(--vidro-base);
     outline: none;
 }
@@ -419,6 +420,11 @@ h1 {
     border-color: var(--cor-secundaria);
     transition: var(--transicao-cores);
     box-shadow: var(--form-shadow);
+}
+
+.campo-form::placeholder {
+    color: var(--cor-placeholder);
+    transition: var(--transicao-cores);
 }
 
 .grupo-form {
