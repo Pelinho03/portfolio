@@ -1,0 +1,13 @@
+.sobre-imagens {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.sobre-imagens img {
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px;
+}
