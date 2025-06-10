@@ -1,4 +1,3 @@
-import numeroTel from "./config.js";
 // Usa numeroTel normalmente/**********************************/
 /* Switch Dark e Ligth Theme
 /**********************************/
@@ -50,6 +49,7 @@ elements.forEach((element) => myObserver.observe(element));
 /**********************************/
 function enviarMensagem(event) {
     event.preventDefault();
+    const numeroTel = "351910790871";
 
     const nome = document.getElementById("nome").value;
     const mensagem = document.getElementById("mensagem").value;
