@@ -22,7 +22,7 @@ if (dateElement) {
 /**********************************/
 /* Animação de Scroll
 /**********************************/
-const myObserver = new IntersectionObserver((entries) => {
+window.myObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
             entry.target.classList.add("show");
