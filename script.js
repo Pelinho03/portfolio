@@ -1,4 +1,5 @@
-/**********************************/
+import numeroTel from "./config.js";
+// Usa numeroTel normalmente/**********************************/
 /* Switch Dark e Ligth Theme
 /**********************************/
 const _elements = {
@@ -52,9 +53,8 @@ function enviarMensagem(event) {
 
     const nome = document.getElementById("nome").value;
     const mensagem = document.getElementById("mensagem").value;
-    const numeroTel = "351910790871";
 
-    const texto = `Olá, sou o ${nome}, ${mensagem}.`;
+    const texto = `Olá, sou o ${nome},\n -${mensagem}.`;
     const msgFormatada = encodeURIComponent(texto);
 
     const url = `https://wa.me/${numeroTel}?text=${msgFormatada}`;
