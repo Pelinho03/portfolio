@@ -18,7 +18,8 @@
 /* 7. Footer
 /* 8. Partículas
 /* 9. Animações
-/* 10. Media Queries
+/* 10. Botão Voltar ao Topo
+/* 11. Media Queries
 /**********************************/
 
 /**********************************/
@@ -515,7 +516,7 @@ h1 {
     bottom: 0;
     background: var(--vidro-navegacao);
     width: 100%;
-    z-index: 100;
+    z-index: 99;
     padding: 1.5rem;
     transition: var(--transicao-cores);
 }
@@ -588,7 +589,44 @@ h1 {
 }
 
 /**********************************/
-/* 10. Media Queries
+/* 10. Botão Voltar ao Topo
+/**********************************/
+.botao-topo {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    font-size: 2rem;
+    z-index: 100;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s;
+}
+
+.botao-topo.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.botao-topo a {
+    color: var(--cor-texto);
+}
+.botao-topo i {
+    transition: var(--transicao);
+}
+
+.botao-topo i:hover {
+    color: var(--cor-primaria);
+}
+
+/**********************************/
+/* 11. Media Queries
 /**********************************/
 
 @media (max-width: 768px) {
