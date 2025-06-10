@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    fetch("../json/projetos.json")
+    fetch("json/projetos.json")
         .then((response) => response.json())
         .then((elementsData) => {
             const projectsGrid = document.querySelector(".projetos-caixa");

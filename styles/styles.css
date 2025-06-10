@@ -45,6 +45,7 @@
     --vidro-foto-perfil: 0 0 20px rgba(59, 58, 191, 0.3);
     --vidro-formulario: rgba(59, 58, 191, 0.1);
     --vidro-sobre: rgba(59, 58, 191, 0.1);
+    --vidro-sobre-hr: 1px solid rgba(59, 58, 191, 0.5);
 
     /* Cartões de projetos */
     --projeto-card-bg: rgba(59, 58, 191, 0.06);
@@ -99,6 +100,7 @@
     --vidro-foto-perfil: 0 0 20px rgba(79, 70, 229, 0.3);
     --vidro-formulario: rgba(255, 255, 255, 0.05);
     --vidro-sobre: rgba(255, 255, 255, 0.05);
+    --vidro-sobre-hr: 1px solid rgba(79, 70, 229, 0.5);
 
     /* Cartões de projetos */
     --projeto-card-bg: rgba(255, 255, 255, 0.05);
@@ -280,6 +282,33 @@ h1 {
 
 .sobre {
     padding: 6rem 2rem;
+    min-height: 100vh;
+}
+
+.sobre hr {
+    width: 50%;
+    margin: 30px auto;
+    border: var(--vidro-sobre-hr);
+    border-radius: 50%;
+    transition: var(--transicao-cores);
+    transition: var(--transicao);
+}
+
+.sobre .skills {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 20px;
+}
+
+.sobre .skills i {
+    font-size: 2rem;
+    transition: var(--transicao);
+    transition: var(--transicao-cores);
+}
+.sobre .skills i:hover {
+    color: var(--cor-primaria);
+    cursor: pointer;
 }
 
 .sobre-titulo {
@@ -301,9 +330,14 @@ h1 {
     transition: var(--transicao-cores);
 }
 
+.sobre-caixa h3 {
+    text-align: center;
+}
+
 .sobre-paragrafo {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
 }
 
 /**********************************/
