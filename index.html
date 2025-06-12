@@ -17,33 +17,82 @@
     <div class="particulas"></div>
 
     <!-- MENU DE NAVEGAÇÃO -->
-    <nav class="navegacao">
-        <ul class="menu">
-            <li>
-                <a href="#inicio" class="menu-link">Início</a>
-            </li>
-            <li>
-                <a href="#sobre" class="menu-link">Sobre</a>
-            </li>
-            <li>
-                <a href="#projetos" class="menu-link">Projetos</a>
-            </li>
-            <li>
-                <a href="#contactos" class="menu-link">Contacto</a>
-            </li>
-            <li>
-                <div class="switch">
-                    <div class="sol">
-                        <i class="fas fa-sun"></i>
-                    </div>
-                    <span class="switch_track"></span>
-                    <div class="lua">
-                        <i class="fas fa-moon"></i>
-                    </div>
+    <header class="navegacao">
+
+        <nav class="nav-bar">
+            <div class="logo">
+                <img src="assets/img/logo.png" alt="">
+            </div>
+
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item">
+                        <a href="#inicio" class="nav-link">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#sobre" class="nav-link">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projetos" class="nav-link">Projetos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contactos" class="nav-link">Contactos</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="switch">
+                <div class="sol">
+                    <i class="fas fa-sun"></i>
                 </div>
-            </li>
-        </ul>
-    </nav>
+                <span class="switch_track">
+
+                </span>
+                <div class="lua">
+                    <i class="fas fa-moon"></i>
+                </div>
+            </div>
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()" class="icon">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+
+        </nav>
+
+        <div class="mobile-menu">
+
+            <ul>
+                <li class="nav-item">
+                    <a href="#inicio" class="nav-link">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#sobre" class="nav-link">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projetos" class="nav-link">Projetos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contactos" class="nav-link">Contactos</a>
+                </li>
+            </ul>
+
+            <div class="switch">
+                <div class="sol">
+                    <i class="fas fa-sun"></i>
+                </div>
+                <span class="switch_track">
+
+                </span>
+                <div class="lua">
+                    <i class="fas fa-moon"></i>
+                </div>
+            </div>
+
+        </div>
+
+    </header>
 
     <!-- FOTO DE PERFIL | NOME | CARGOS -->
     <main id="inicio" class="cabecalho">
