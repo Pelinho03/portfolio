@@ -151,6 +151,12 @@ body {
     transition: var(--transicao-cores);
 }
 
+.section-title {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 /**********************************/
 /* 2. Navegação | menu
 /**********************************/
@@ -313,14 +319,6 @@ h1 {
     cursor: pointer;
 }
 
-.sobre-titulo {
-    font-size: 3rem;
-    color: var(--cor-texto);
-    transition: var(--transicao-cores);
-    text-align: center;
-    margin-bottom: 20px;
-}
-
 .sobre-caixa {
     padding: 1.5rem;
     max-width: 1200px;
@@ -354,12 +352,6 @@ h1 {
     text-decoration: none;
     color: var(--cor-texto);
     transition: var(--transicao-cores);
-}
-
-.projetos-titulo {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
 }
 
 .projetos-caixa {
@@ -448,12 +440,6 @@ h1 {
     padding: 6rem 2rem;
 }
 
-.contactos-titulo {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
 .formulario-contacto {
     max-width: 1200px;
     margin: 0 auto;
@@ -466,6 +452,7 @@ h1 {
 }
 
 .campo-form {
+    color: var(--cor-texto);
     width: 100%;
     background: var(--vidro-formulario);
     transition: var(--transicao-cores);
@@ -630,11 +617,31 @@ h1 {
 /* 11. Media Queries
 /**********************************/
 
-@media (max-width: 768px) {
+@media screen and (max-width: 730px) {
     .menu {
         gap: 0.5rem;
     }
     .cabecalho-sub-titulo {
         font-size: 1.2rem;
+    }
+
+    .botao-topo {
+        position: fixed;
+        right: 30px;
+        bottom: 30px;
+    }
+
+    .sobre,
+    .contactos,
+    .projetos {
+        padding: 6rem 1.2rem;
+    }
+
+    .sobre hr {
+        margin: 1rem auto;
+    }
+
+    .section-title {
+        font-size: 2rem;
     }
 }
