@@ -261,6 +261,7 @@ body {
 .foto-perfil {
     width: 350px;
     height: 350px;
+    object-fit: cover;
     box-shadow: var(--vidro-foto-perfil);
     transition: var(--transicao-cores);
     border-radius: 50%;
