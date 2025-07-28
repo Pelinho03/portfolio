@@ -1,20 +1,38 @@
 [
   {
     "title": "FlixFlow",
-    "link": "https://github.com/Pelinho03/FlixFlow.git",
+    "link": "https://github.com/Pelinho03/FlixFlow",
     "description": "<strong>FlixFlow</strong> é uma aplicação de streaming em <strong>Flutter</strong> que permite <em>pesquisar filmes e séries</em>, adicionar favoritos e explorar categorias de conteúdos. Com integração <strong>Firebase</strong>, o projeto oferece uma experiência <em>simples e intuitiva</em> para centralizar e personalizar o entretenimento.",
     "image": "assets/img/proj_1.png"
   },
   {
     "title": "TradeShark",
-    "link": "https://github.com/Pelinho03/TradeShark-website.git",
+    "link": "https://github.com/Pelinho03/TradeShark-website",
     "description": "<strong>TradeShark.pt</strong> é uma plataforma de <em>e-commerce</em> para materiais de construção, desenvolvida com <strong>HTML, CSS, JavaScript</strong> e <strong>PHP</strong>. Oferece funcionalidades como <em>carrinho de compras</em>, <strong>gestão de utilizadores</strong> e modos de visualização, ideal para soluções de <strong>comércio online</strong> de construção.",
     "image": "assets/img/proj_2.png"
   },
   {
-    "title": "GitHub",
-    "link": "https://github.com/Pelinho03",
-    "description": "Acompanha os meus projetos e colaborações em desenvolvimento de software no <strong>GitHub</strong>. Desde pequenas experiências até aplicações mais robustas, partilho código aberto focado em <em>soluções criativas e funcionais</em>.",
-    "image": "assets/img/proj_4.png"
+    "title": "FocusFlow",
+    "link": "https://github.com/Pelinho03/LPP-project",
+    "description": "<strong>FocusFlow</strong> é um sistema de <em>gestão de tarefas</em> com prioridades e controlo de utilizadores. Desenvolvido em <strong>Python</strong> com <strong>PyQt6</strong>, permite <em>criar, atribuir e organizar tarefas</em> por equipas, com diferentes níveis de acesso (<strong>Admin/Utilizador</strong>). Armazena dados em <strong>JSON</strong> e oferece uma interface <em>intuitiva</em> para melhorar a produtividade de equipas.",
+    "image": "assets/img/proj_7.png"
+  },
+  {
+    "title": "MyWarehouse",
+    "link": "https://github.com/Pelinho03/CG-project",
+    "description": "<strong>MyWarehouse</strong> é um <em>simulador de armazém automatizado</em> com visualização 3D em <strong>WebGL</strong>. Permite observar <em>robôs a transportar caixas</em> entre estantes, com controlo através de interface gráfica interativa (<strong>GUI</strong>). Desenvolvido em <strong>JavaScript</strong>, <strong>HTML5</strong> e <strong>WebGL</strong>, combina computação gráfica com lógica orientada a objetos para criar uma simulação <em>realista e educativa</em>.",
+    "image": "assets/img/proj_6.png"
+  },
+  {
+    "title": "OceanEye",
+    "link": "https://github.com/Pelinho03/IA-project",
+    "description": "<strong>OceanEye</strong> é um sistema de <em>deteção de plásticos</em> usando <strong>IA</strong>. Identifica <em>garrafas e sacas plásticas</em> em imagens com caixas delimitadoras. Interface simples em <strong>Tkinter</strong> para análise em tempo real. Ferramenta útil para <em>monitorização ambiental</em>. Desenvolvido com <strong>Python</strong> e <strong>PyTorch</strong>.",
+    "image": "assets/img/proj_8.png"
+  },
+  {
+    "title": "Auribus - Coffee Shop",
+    "link": "https://github.com/Pelinho03/coffee_page",
+    "description": "<strong>Auribus - Coffee Shop</strong> é uma <em>landing page moderna</em> para uma coffee shop, desenvolvida com <strong>HTML5</strong> e <strong>CSS3</strong>. Apresenta um design <em>responsivo</em>, secções de menu, avaliações de clientes, localização no Google Maps e integração com ícones interativos. Ideal para divulgação de cafés e pequenas empresas, focando na <em>experiência visual</em> e facilidade de navegação.",
+    "image": "assets/img/proj_9.png"
   }
 ]
